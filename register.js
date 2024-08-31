@@ -4,6 +4,10 @@ const regex = new RegExp(phoneNumberPattern);
 let validName = false;
 let phoneFlag = false;
 
+let numberError = "<br>Invalid Number";
+let nameError = "<br>No spaces allowd in name";
+let passwordError = "<br>Password and confirm password must be same"
+
 
 let form = document.getElementById("register-form");
 let response = document.getElementById("responseMessage")
@@ -13,18 +17,23 @@ form.addEventListener("submit", (e)=>{
     let samePwd = document.getElementById("password").value == document.getElementById("confirmPassword").value;
     let validGender = e.target.gender.value != "";
     if (!validNumber){
-        document.getElementById("responseMessage").innerHTML += "Invalid Number";
+        if (!String(document.getElementById("responseMessage").innerHTML).includes(numberError))
+            document.getElementById("responseMessage").innerHTML += numberError;
         phoneFlag = true;
     }
-    if (!document.getElementById("password").value == document.getElementById("confirmPassword").value){
-
+    console.log(document.getElementById("password").value);
+        console.log(document.getElementById("confirmPassword").value);
+    if (!(document.getElementById("password").value == document.getElementById("confirmPassword").value)){
+        if(!String(document.getElementById("responseMessage").innerHTML).includes(passwordError))
+        document.getElementById("responseMessage").innerHTML += passwordError;
     }
 
 });
 
 document.getElementById("name").addEventListener("input",e=>{
     if (String(e.target.value).includes(" ") ){
-        document.getElementById("responseMessage").innerHTML += "No spaces allowd in name";
+        if (!String(document.getElementById("responseMessage").innerHTML).includes(nameError))
+            document.getElementById("responseMessage").innerHTML += nameError;
         validName = false;
     }
     else{
@@ -43,7 +52,7 @@ document.getElementById("phone").addEventListener("input",(e) => {
         document.getElementById("phone").style.color = "red";
     }else{
         document.getElementById("phone").style.color = "green";
-        document.getElementById("responseMessage").innerHTML = document.getElementById("responseMessage").innerHTML.replace("Invalid Number","")
+        document.getElementById("responseMessage").innerHTML = document.getElementById("responseMessage").innerHTML.replace(numberError,"")
     }
     
     console.log(phone);
