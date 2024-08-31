@@ -6,17 +6,19 @@
     <title>register</title>
 </head>
 <body>
-    <form action="" method="post">
-        <input type="text" name="name" placeholder="Name" pattern="">
+    <form action="" method="post" id="register-form">
+        <input type="text" name="name" placeholder="Name" id="name">
         <input type="text" name="email" placeholder="Email" id="email">
-        <input type="text" name="password" placeholder="Password">
-        <input type="text" name="confirmPassword" placeholder="confirmPassword">
+        <input type="text" name="password" placeholder="Password" id="password">
+        <input type="text" name="confirmPassword" placeholder="confirmPassword" id="confirmPassword">
         <input type="tel" name="phone" placeholder="Phone" id="phone">
         <input type="radio" name="gender" value="male"> Male
         <input type="radio" name="gender" value="female"> Female
-        <button type="submit" onclick="{btn}">Register</button>
+        <button type="submit">Register</button>
         <span>Already have an account?<a href="login.html"> Login</a></span>
     </form>
+    <div id="responseMessage"></div>
+    <!-- <div id="phoneNumberResponseMessage"></div> -->
 </body>
 <script src="register.js"></script>
 </html>
