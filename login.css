@@ -1,0 +1,75 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    position: relative; /* Added for positioning the alert */
+}
+
+/* Input Styling */
+input[name="email"],
+input[name="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Alert Message Styling */
+#alertMessage {
+    display: none; /* Hidden by default */
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+    text-align: center;
+    font-size: 14px;
+    position: absolute; /* Absolute positioning */
+    top: -50px; /* Positioning the alert above the form */
+    width: calc(100% - 20px); /* Adjust width */
+    left: 10px; /* Center horizontally */
+}

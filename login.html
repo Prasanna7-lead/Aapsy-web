@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
 <body>
-    <form action="" method="post">
-
-        <input name ="email" placeholder="Email">
-        <input name="password" placeholder="password">
+    <form action="" method="post" id="login-form">
+        <div id="alertMessage"></div>
+        <input name ="email" placeholder="Email" id="email">
+        <input name="password" placeholder="password" id="password">
         <button type="submit" >Login</button>
     </form>
     <span>Don't have an account?<a href="register.html"> Create account</a></span>
     
 </body>
+<script src="login.js"></script>
 </html>
