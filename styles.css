@@ -18,7 +18,8 @@ header {
     background-color: rgb(234, 218, 188);
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: static;
+    height: 100px;
 }
 
 /* Container styles */
@@ -26,6 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 /* Logo styles */
