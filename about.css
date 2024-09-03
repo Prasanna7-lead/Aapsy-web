@@ -14,9 +14,13 @@ header {
     background-color: rgb(234, 218, 188);
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: static;
-    height: 100px;
+    position: sticky; /* Changed from static to sticky */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it sits above other content */
+    height: 100px; /* Set height as needed */
 }
+
 
 /* Container styles */
 .header-container {
@@ -233,12 +237,12 @@ header {
     margin-bottom: 20px;
 }
 
-.header-container {
+/* .header-container {
     background-position: center;
     background-size: cover;
     background: linear-gradient(to top, rgba(0,0,0,5)50%,rgba(0,0,0,0.5)50%,url(Images/hugo-clement-JGtPrdnMgQc-unsplash.jpg));
 
-}
+} */
 /* 
 .team-photo {
     width: 500%;
@@ -265,7 +269,28 @@ footer {
     width: 100%;
     bottom: 0;
 } */
-.tpimg{
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     
 
 }
+
+
+.background-container {
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('Images/hugo-clement-JGtPrdnMgQc-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: Keeps the background fixed in place during scroll */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+h1 {
+    padding-top: 20%;
+    text-align: center;
+    color: white;
+}
+
