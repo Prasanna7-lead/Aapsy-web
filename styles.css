@@ -11,7 +11,7 @@
 }
 
 /* Import fonts from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&family=Pacifico&display=swap');
 
 /* Header styles */
 header {
@@ -300,6 +300,123 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.advertisement-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Background color to match the theme */
+    padding: 10px 20px;
+    margin: 0 0; /* Add some margin above and below the bar */
+    border-radius: 10px; /* Rounded corners for the bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+}
+
+/* Styling individual brand containers */
+.brand-container {
+    flex: 1;
+    text-align: center; /* Center-align the logos */
+}
+
+/* Styling brand logos */
+.brand-container img {
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    object-fit: contain; /* Maintain aspect ratio and ensure the entire image is visible */
+    filter: brightness(0) saturate(100%); /* Black and white effect for logos */
+    transition: filter 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for brand logos */
+.brand-container img:hover {
+    filter: brightness(1) saturate(100%); /* Color logos on hover */
+}
+
+/* Updated container styles */
+.container {
+    width: 100%; /* Span the entire screen width */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(234, 218, 188);
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #ffe9b2;
+  }
+
+/* Updated H1 styles */
+#title {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-align: left; /* Align text to the left */
+    font-family: "Roboto Mono", monospace; /* Funky font */
+    color: #7c4d14; /* Tomato color for the H1 text */
+    text-shadow: -1px -1px 0px var(--background),
+      1px 1px 0px var(--background),
+      2px 2px 0px #00000055;
+      transition: 4s;
+}
+
+/* Updated product-card styles */
+.product-card {
+    background-color: #fff4e0; /* AliceBlue for a softer card background color */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+/* Ensure text in H2 and P aligns left */
+h2, p {
+    text-align: left;
+}
+
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.product-image {
+    width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.feature-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
 }
 
 /* Responsive design */
