@@ -459,13 +459,14 @@ p {
 }
 
 .description {
-    font-size: 14px;
+    font-size: 17px;
     color: #777;
     max-width: 80%;
 }
 
 .content {
     max-width: 50%;
+    max-height: 130%;
 }
 
 .imagee {
@@ -480,7 +481,8 @@ p {
 }
 
 .pane-section {
-    background-color: #e1b173;
+    background-color: rgb(234, 218, 188);
+    max-height: 130%;
 }
 
 .pane {
@@ -490,5 +492,43 @@ p {
     padding: 40px;
     color: rgb(60, 38, 8);
 
+
+}
+
+.ba-container {
+    position: relative;
+    /* To position pseudo-element */
+    width: 100%;
+    height: 60vh;
+    /* Full viewport height */
+    overflow: hidden;
+    /* Prevents overflow if content exceeds viewport */
+}
+
+.ba-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url('Images/hugo-clement-JGtPrdnMgQc-unsplash.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Optional: Keeps the background fixed in place during scroll */
+    opacity: 0.6;
+    /* Apply opacity to the background */
+    z-index: -1;
+    /* Place the pseudo-element behind the content */
+}
+
+/* Ensure the content is positioned above the background */
+.ba-content {
+    position: relative;
+    /* Ensure it sits above the pseudo-element */
+    z-index: 1;
+    /* Higher than pseudo-element */
 
 }
