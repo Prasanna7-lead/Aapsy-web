@@ -532,3 +532,36 @@ p {
     /* Higher than pseudo-element */
 
 }
+
+
+.button-container {
+    display: inline-block;
+    padding: 30px;
+    padding-left: 13%;
+   
+}
+
+.explore-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff; /* Text color */
+    text-decoration: none;
+    border: 1px solid #ffffff; /* Border color */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    padding-left: 13px;
+
+}
+
+.explore-button:hover {
+    background-color: #a58a69;
+  
+}
+
+.arrow {
+    margin-left: 10px;
+    font-size: 20px;
+}
