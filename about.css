@@ -278,19 +278,173 @@ html, body {
 }
 
 
+/* Container for background with pseudo-element */
 .background-container {
-    background-image: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('Images/hugo-clement-JGtPrdnMgQc-unsplash.jpg');
+    position: relative; /* To position pseudo-element */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents overflow if content exceeds viewport */
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('Images/shopping.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Optional: Keeps the background fixed in place during scroll */
-    width: 100%;
-    height: 100vh; /* Full viewport height */
+    opacity: 0.6; /* Apply opacity to the background */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+/* Ensure the content is positioned above the background */
+.background-content {
+    position: relative; /* Ensure it sits above the pseudo-element */
+    z-index: 1; /* Higher than pseudo-element */
+    
+}
+
+h3 {
+    padding-top: 110px;
+    text-align: center;
+    color: rgb(88, 56, 12);
 }
 
 h1 {
-    padding-top: 20%;
+    padding-top: 9%;
     text-align: center;
-    color: white;
+    color: rgb(60, 38, 8);
+    font-family: "Anton", sans-serif;
+    font-weight: 1100;
+    font-style: normal;
+    font-size: 45px;
+}
+
+h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(60, 38, 8);
+    font-size: 19px;
+}
+
+h5 {
+    text-align: center;
+     padding-top: 10px;
+}
+
+
+h6 {
+    text-align: center;
+    padding-top: 10px;
+    height: 50px;
+
+}
+
+hr {
+    border: none; /* Remove default border */
+    height: 3px; /* Make the line thicker */
+    background-color: rgb(60, 38, 8); /* Color of the line */
+    margin: 20px auto; /* Space above and below the line, auto centers it */
+    width: 90px; /* Adjust width to create a gap from the sides */
+}
+
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+              /* Full viewport height */
+}
+
+.box {
+    display:flex /* Makes the box fit around the content */
+  /* Adds space inside the box */
+    background-color: rgba(100, 87, 87, 0.8); /* Dark background color with transparency */
+    color: rgb(60, 38, 8);
+    border-radius: 13px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect for depth */
+    text-align: center; /* Center-aligns text inside the box */
+    margin-top: 1%; /* Space above the box */
+    height: 40px;
+}
+
+/* .divider{
+    display: flex;
+} */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.info-box {
+    text-align: center;
+    border: 1px ;
+    background-color: rgb(213, 210, 199);
+    height: 260px;
+    border-radius: 9px;
+    max-width: 280px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+}
+
+.info-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #cccccc;
+}
+p{
+    font-family: "PT Serif", serif;
+}
+.next{
+    background-color: rgb(255, 245, 226);
+}
+
+.product-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+    background-color: #ffffff;
+}
+
+.image img {
+    max-width: 70%;
+    height: auto;
+    height: auto;
+    display: block;
+    margin-right: 20px;
+}
+
+.description {
+    font-size: 14px;
+    color: #777;
+    max-width: 80%;
+}
+.content {
+    max-width: 50%;
+}
+.imagee {
+    /* Adjust based on your desired image size */
+    margin-left: 20px;
+}
+
+.imagee img {
+    width: 90%;
+    height: 50%;
+    display: block;
+}
+
+.pane-section{
+    background-color: #ffd8d8;
 }
 
