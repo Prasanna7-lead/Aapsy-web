@@ -10,9 +10,6 @@ let showAlert = (message, type = 'error') => {
     const alertDiv = document.getElementById('alertMessage');
     alertDiv.textContent = message;
     alertDiv.style.display = 'block';
-    alertDiv.style.backgroundColor = type === 'success' ? '#d4edda' : '#f8d7da';
-    alertDiv.style.color = type === 'success' ? '#155724' : '#721c24';
-    alertDiv.style.borderColor = type === 'success' ? '#c3e6cb' : '#f5c6cb';
 }
 
 document.getElementById('email').addEventListener('input',e=>{
@@ -26,13 +23,13 @@ document.getElementById('login-form').addEventListener('submit',e=>{
     let password = document.getElementById('password').value.trim();
 
     if(!email||!password){
-        showAlert("All fields are required");
+        showAlert("All fields are required !!!");
         return;
     }
 
 
     if(!validateEmail(email)){
-        showAlert("Invalid email");
+        showAlert("Invalid email !!!");
         validEmail = false;
         return ;
     }

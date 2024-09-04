@@ -5,23 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="register.css">
+    <!-- yogi code starts here -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #be9174;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        section {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            height: 80vh;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .left h1 {
+            margin: 20px 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .left form {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .left input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            /* border-radius: 4px; */
+            /* box-sizing: border-box; */
+            border-bottom: 1px solid black;;
+        }
+
+        .left button {
+            padding: 12px;
+            background-color: #733621;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .left button:hover {
+            background-color: #a34425;
+        }
+
+        .left span {
+            font-size: 14px;
+        }
+
+        .left a {
+            color: #733621;
+            text-decoration: none;
+        }
+
+        .left a:hover {
+            text-decoration: underline;
+            color: #a34425;
+        }
+
+        .right {
+            position: relative;
+            width: 50%;
+        }
+        .gender {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            margin-top: -17px;
+            margin-left: 8%;
+        }
+
+        .gender input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .gender label {
+            margin-right: 15px;
+        }
+
+        .right img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #alertMessage {
+            color: #a34425;
+            font-size: 14px;
+            display: none;
+        }
+    
+    </style>
+    <!-- yogi code ends here -->
 </head>
 <body>
-    <form action="" method="post" id="register-form">
-        <div id="alertMessage"></div>
-
-        <input type="text" name="name" placeholder="Name" id="name">
-        <input type="text" name="email" placeholder="Email" id="email">
-        <input type="password" name="password" placeholder="Password" id="password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password" id="confirmPassword">
-        <input type="tel" name="phone" placeholder="Phone" id="phone">
-        <div>
-            <input type="radio" name="gender" value="male" id="male"> Male
-            <input type="radio" name="gender" value="female" id="female"> Female
+    <section>
+        <div class="left">
+            <form action="" method="post" id="register-form">
+                <h1>Create Account</h1>
+                <input type="text" name="name" placeholder="Name" id="name" >
+                <input type="email" name="email" placeholder="Email" id="email" >
+                <input type="password" name="password" placeholder="Password" id="password" >
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" id="confirmPassword" >
+                <input type="tel" name="phone" placeholder="Phone" id="phone">
+                <!-- added gender-both,gender classes -yogi-->
+                <div class="gender-both">
+                    <label>Gender</label>
+                    <div class="gender">
+                        <input type="radio" name="gender" value="male" id="male" >
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" value="female" id="female" >
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <button type="submit">Register</button>
+                <div id="alertMessage"></div>
+                <span>Already have an account? <a href="login.html">Login</a></span>
+            </form>
         </div>
-        <button type="submit">Register</button>
-        <span>Already have an account? <a href="login.html">Login</a></span>
-    </form>
-    
+        <div class="right">
+            <img src="Images/Registter.jpeg" alt="Register Image">
+        </div>
+    </section>
     <script src="register.js"></script>
 </body>
+</html>
+

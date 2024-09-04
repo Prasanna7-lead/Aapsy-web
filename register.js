@@ -18,9 +18,6 @@ let validatePhone = phone=> {
 let showAlert = (message, type = 'error') => {
     alertDiv.textContent = message;
     alertDiv.style.display = 'block';
-    alertDiv.style.backgroundColor = type === 'success' ? '#d4edda' : '#f8d7da';
-    alertDiv.style.color = type === 'success' ? '#155724' : '#721c24';
-    alertDiv.style.borderColor = type === 'success' ? '#c3e6cb' : '#f5c6cb';
 }
 
 let pwdChecker = e=>{
@@ -55,28 +52,28 @@ document.getElementById('register-form').addEventListener('submit',  e=> {
     let genderFemale = document.getElementById('female').checked;
 
     if (!name || !email || !password || !confirmPassword || !phone || (!genderMale && !genderFemale)) {
-        showAlert('All fields are required');
+        showAlert('All fields are required !!!');
         return;
     }
 
     if (!validateEmail(email)) {
-        showAlert('Invalid email');
+        showAlert('Invalid email !!!');
         validEmail = false;
         return;
     }
 
     if (password !== confirmPassword) {
-        showAlert('Passwords do not match');
+        showAlert('Passwords do not match !!!');
         validpwd = false
         return;
     }
 
     if (!validatePhone(phone)) {
-        showAlert('Invalid phone number format please use numbers only');
+        showAlert('Invalid phone number format please use numbers only !!!');
         validPhone = false;
         return;
     }
-    showAlert('Registration successful!', 'success');
+    showAlert('!Registration successful!', 'success');
 });
 // ^^^^     code by Abinesh   ^^^^
 

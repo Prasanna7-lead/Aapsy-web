@@ -101,7 +101,7 @@
         }
 
         .right span {
-            margin-top: 16px;
+            /* margin-top: 16px; */
             font-size: 14px;
         }
 
@@ -121,8 +121,11 @@
             right: 13px;
             top: 13px;
         }
-        
-
+        #alertMessage {
+            color: #a34425;
+            font-size: 14px;
+            display: none;
+        }
         /* yogi code ends here         */
     </style>
 </head>
@@ -134,18 +137,19 @@
             <img src="Images/Login.png" alt="Login Image">
         </div>
         <div class="right">
-            <form action="" method="post">
+            <form action="" method="post" id="login-form">
                 <h1 class="head-h1">Login</h1>
                 <div class="email">
-                <input name="userName" placeholder="Email" type="email"  required>
+                <input name="userName" placeholder="Email" type="text"  id="email">
                 <i class="fa-solid fa-envelope email-1" style="color: #161717;"></i>
                 </div>
                 <div class="email">
-                <input name="password" placeholder="Password" type="password" required>
+                <input name="password" placeholder="Password" type="password" id="password">
                 <i class="fa-solid fa-lock email-1" style="color: #121212;"></i>
             </div>
                 
                 <button type="submit">Login</button>
+                <div id ="alertMessage"></div>
                 <span>Don't have an account? <a href="register.html">Create account</a></span>
             </form>
         </div>
