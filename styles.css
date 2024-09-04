@@ -1,5 +1,3 @@
-
-
 /* Prasanna's code starts */
 
 /* Basic reset and box-sizing */
@@ -7,11 +5,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif; /* Default font for body text */
+    font-family: 'Montserrat', sans-serif;
+    /* Default font for body text */
 }
 
 /* Import fonts from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&family=Pacifico&display=swap&family=Space+Grotesk:wght@300..700&display=swap');
 
 /* Header styles */
 header {
@@ -95,7 +94,7 @@ header {
 }
 
 /* Dropdown trigger link */
-.nav-container .dropdown > a {
+.nav-container .dropdown>a {
     display: flex;
     align-items: center;
     color: #333;
@@ -119,9 +118,11 @@ header {
 .nav-container .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%; /* Aligns dropdown content below the trigger */
+    top: 100%;
+    /* Aligns dropdown content below the trigger */
     left: 0;
-    width: 150px; /* Fixed width for dropdown */
+    width: 150px;
+    /* Fixed width for dropdown */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -147,7 +148,8 @@ header {
     color: #333;
     text-decoration: none;
     font-size: 14px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
+    /* Align text to the left */
     border-bottom: 1px solid #ddd;
 }
 
@@ -203,6 +205,37 @@ header {
     color: #333;
 }
 
+/* Cart icon styles */
+.cart-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 5px; /* Adjust the space between the cart icon and previous element */
+}
+
+.cart-icon a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px; /* Adjust padding around the icon */
+    transition: color 0.3s ease;
+}
+
+.cart-icon svg {
+    width: 24px; /* Set icon size */
+    height: 24px;
+    fill: none;
+    stroke: #333; /* Icon color */
+    stroke-width: 2;
+    transition: stroke 0.3s ease;
+}
+
+.cart-icon a:hover svg {
+    stroke: #a26e29; /* Change icon color on hover */
+}
+
+
 /* After-header styles */
 .after-header {
     background-color: #fff6a5;
@@ -235,17 +268,20 @@ header {
 }
 
 .text-container h1 {
-    font-family: 'Playfair Display', serif; /* Elegant serif font for headings */
+    font-family: 'Playfair Display', serif;
+    /* Elegant serif font for headings */
     font-size: 3rem;
     margin-bottom: 20px;
     color: #000;
     display: flex;
-    align-items: flex-start; /* Align icons to the start */
+    align-items: flex-start;
+    /* Align icons to the start */
 }
 
 .text-container h1 i {
     margin-right: 10px;
-    flex-shrink: 0; /* Prevent icon from shrinking */
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
 }
 
 .text-container p {
@@ -254,13 +290,15 @@ header {
     margin-bottom: 20px;
     line-height: 1.6;
     display: flex;
-    align-items: flex-start; /* Align icons to the start */
+    align-items: flex-start;
+    /* Align icons to the start */
     margin-left: 40px;
 }
 
 .text-container p i {
     margin-right: 10px;
-    flex-shrink: 0; /* Prevent icon from shrinking */
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
 }
 
 /* CTA button styles */
@@ -276,7 +314,8 @@ header {
     transition: background-color 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
-    max-width: 200px; /* Limit the button width */
+    max-width: 200px;
+    /* Limit the button width */
     /* Center the button within its container */
     margin: 0 auto;
 }
@@ -309,36 +348,48 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white; /* Background color to match the theme */
+    background-color: white;
+    /* Background color to match the theme */
     padding: 10px 20px;
-    margin: 0 0; /* Add some margin above and below the bar */
-    border-radius: 10px; /* Rounded corners for the bar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    margin: 0 0;
+    /* Add some margin above and below the bar */
+    border-radius: 10px;
+    /* Rounded corners for the bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for a 3D effect */
 }
 
 /* Styling individual brand containers */
 .brand-container {
     flex: 1;
-    text-align: center; /* Center-align the logos */
+    text-align: center;
+    /* Center-align the logos */
 }
 
 /* Styling brand logos */
 .brand-container img {
-    width: 100px; /* Set a fixed width */
-    height: 100px; /* Set a fixed height */
-    object-fit: contain; /* Maintain aspect ratio and ensure the entire image is visible */
-    filter: brightness(0) saturate(100%); /* Black and white effect for logos */
-    transition: filter 0.3s ease; /* Smooth transition effect */
+    width: 100px;
+    /* Set a fixed width */
+    height: 100px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Maintain aspect ratio and ensure the entire image is visible */
+    filter: brightness(0) saturate(100%);
+    /* Black and white effect for logos */
+    transition: filter 0.3s ease;
+    /* Smooth transition effect */
 }
 
 /* Hover effect for brand logos */
 .brand-container img:hover {
-    filter: brightness(1) saturate(100%); /* Color logos on hover */
+    filter: brightness(1) saturate(100%);
+    /* Color logos on hover */
 }
 
 /* Updated container styles */
 .container {
-    width: 100%; /* Span the entire screen width */
+    width: 100%;
+    /* Span the entire screen width */
     margin: 0 auto;
     padding: 20px;
     background-color: rgb(234, 218, 188);
@@ -346,26 +397,30 @@ header {
 }
 
 :root {
-    --background: #ffe9b2;
-  }
+    --background: #000000;
+}
 
 /* Updated H1 styles */
 #title {
     font-size: 2.5em;
     font-weight: 400;
     margin-bottom: 40px;
-    text-align: left; /* Align text to the left */
-    font-family: "Roboto Mono", monospace; /* Funky font */
-    color: #7c4d14; /* Tomato color for the H1 text */
+    text-align: left;
+    /* Align text to the left */
+    font-family: "Space Grotesk", sans-serif;
+    /* Funky font */
+    color: #77460a;
+    /* Tomato color for the H1 text */
     text-shadow: -1px -1px 0px var(--background),
-      1px 1px 0px var(--background),
-      2px 2px 0px #00000055;
-      transition: 4s;
+        1px 1px 0px var(--background),
+        2px 2px 0px #00000055;
+    transition: 4s;
 }
 
 /* Updated product-card styles */
 .product-card {
-    background-color: #fff4e0; /* AliceBlue for a softer card background color */
+    background-color: #fff4e0;
+    /* AliceBlue for a softer card background color */
     border-radius: 10px;
     padding: 20px;
     width: 300px;
@@ -374,7 +429,8 @@ header {
 }
 
 /* Ensure text in H2 and P aligns left */
-h2, p {
+h2,
+p {
     text-align: left;
 }
 
@@ -422,6 +478,178 @@ p {
     margin-bottom: 5px;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.content-image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    margin-top: 30px;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 3%;
+    font-size: 36px;
+    color: #77460a;
+    margin: 0;
+    padding-bottom: 10px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.text-content {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.text-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    width: 70%;
+}
+
+.cta-link {
+    background-color: #b88b52;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.cta-link:hover {
+    background-color: #e1b173;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #de9637;
+    color: #333;
+}
+
+.image-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.curved-line {
+    position: absolute;
+    top: 155px;
+    left: 10%;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    transform: translateX(-25%);
+    background-image: url('Images/fe255514d6fd3805d0ee8d1cf9fc8b98-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.curved-line path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 2s ease forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.FAQ-container {
+    width: 100%;
+    padding: 50px;
+    background-color: #f9f6eb;
+    text-align: left;
+    font-family: 'Arial', sans-serif; /* You can choose another good font here */
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 50px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: lighter;
+}
+
+.faq {
+    width: 50%;
+    margin-left: auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+    text-align: left; /* Align text to the left */
+}
+
+.faq-question:hover {
+    color: #000;
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px;
+    background-color: transparent;
+    color: #555;
+    transition: max-height 0.2s ease, padding 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.toggle-symbol {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+/* When active, change symbol and ensure smooth transition */
+.active .toggle-symbol {
+    transform: rotate(360deg); /* Change "+" to "x" */
+}
+
+.active .faq-answer {
+    display: block;
+    max-height: 500px; /* Adjust as necessary */
+    padding: 20px;
+}
+
+
+
 /* Responsive design */
 @media (max-width: 768px) {
     .header-container {
@@ -454,5 +682,86 @@ p {
         font-size: 1rem;
     }
 }
+
+
+.footer-container {
+    width: 100%;
+    background-color: #f9f6eb; /* Pink color to replicate the design */
+    padding: 40px;
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #555;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer-left h1 {
+    font-size: 72px;
+    margin: 0;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.footer-center p, .footer-right ul {
+    font-size: 14px;
+}
+
+.footer-center p a, .footer-right ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #333;
+}
+
+.footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-left h1 {
+    font-size: 144px;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 2px #333;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #333;
+}
+
 
 /* Prasanna's code ends  */
