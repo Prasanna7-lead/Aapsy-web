@@ -484,9 +484,11 @@ p {
 }
 
 .pane {
-    font-family: "Anton", sans-serif;
-    font-weight: bold;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
     font-size: 35px;
     padding: 40px;
+    color: rgb(60, 38, 8);
+
 
 }
