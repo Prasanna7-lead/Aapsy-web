@@ -205,6 +205,37 @@ header {
     color: #333;
 }
 
+/* Cart icon styles */
+.cart-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 5px; /* Adjust the space between the cart icon and previous element */
+}
+
+.cart-icon a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px; /* Adjust padding around the icon */
+    transition: color 0.3s ease;
+}
+
+.cart-icon svg {
+    width: 24px; /* Set icon size */
+    height: 24px;
+    fill: none;
+    stroke: #333; /* Icon color */
+    stroke-width: 2;
+    transition: stroke 0.3s ease;
+}
+
+.cart-icon a:hover svg {
+    stroke: #a26e29; /* Change icon color on hover */
+}
+
+
 /* After-header styles */
 .after-header {
     background-color: #fff6a5;
@@ -496,6 +527,7 @@ body {
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     max-width: 200px;
+    border-radius: 5px;
 }
 
 .cta-link:hover {
