@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div class="user-info">
+            <span>Welcome, Admin</span>
+            <a href="#">Logout</a>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <!-- Side Panel -->
+        <div class="side-panel">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#" id="products-link">Products</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Dashboard</h1>
+                <p>Welcome to the admin panel.</p>
+            </header>
+            <section id="dashboard-content">
+                <!-- Dashboard Content -->
+                <div class="content-area">
+                    <h2>Analytics</h2>
+                    <p>Display analytics, charts, and statistics here.</p>
+                </div>
+            </section>
+            
+            <!-- Products Content -->
+            <section id="products-content" style="display: none;">
+                <div class="content-area">
+                    <h2>Products</h2>
+                    <button id="add-product-btn">Add Product</button>
+
+                    <!-- List of products (for example) -->
+                    <div id="product-list">
+                        <p>Product 1: Name, Price, Stock...</p>
+                        <p>Product 2: Name, Price, Stock...</p>
+                        <!-- More products... -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Product</h2>
+            <form id="product-form">
+                <label for="productName">Name:</label>
+                <input type="text" id="productName" name="productName" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" required>
+
+                <label for="discount">Discount:</label>
+                <input type="number" id="discount" name="discount">
+
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="Mens">Mens</option>
+                    <option value="Womens">Womens</option>
+                    <option value="Kids">Kids</option>
+                    <!-- More categories... -->
+                </select>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <!-- More sizes... -->
+                </select>
+
+                <label for="productImages">Product Images:</label>
+                <div id="image-upload-container">
+                    <div class="image-upload-field">
+                        <input type="file" name="productImages[]" accept="image/*">
+                        <button type="button" class="add-image-btn">+</button>
+                    </div>
+                </div>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
