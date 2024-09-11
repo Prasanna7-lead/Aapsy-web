@@ -565,3 +565,133 @@ p {
     margin-left: 10px;
     font-size: 20px;
 }
+
+
+.footer-container {
+    width: 100%;
+    background-color: #f9f6eb; /* Pink color to replicate the design */
+    padding: 40px;
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #555;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer-left h1 {
+    font-size: 72px;
+    margin: 0;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.footer-center p, .footer-right ul {
+    font-size: 14px;
+}
+
+.footer-center p a, .footer-right ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #333;
+}
+
+.footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-left h1 {
+    font-size: 144px;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 2px #333;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #333;
+}
+
+
+#title {
+    font-size: 20px; /* Reduce title size */
+    text-align: center; /* Center-align title */
+}
+
+.product-card {
+    width: 100%; /* Make product cards full-width */
+    margin-bottom: 20px; /* Add bottom margin */
+}
+
+.product-grid {
+    flex-direction: column; /* Stack products vertically */
+    gap: 10px; /* Reduce gap between products */
+}
+.footer-container {
+    padding: 20px 10px; /* Adjust padding */
+    text-align: center; /* Center-align text */
+}
+
+.footer-content {
+    flex-direction: column; /* Stack footer sections vertically */
+    align-items: center; /* Center-align content */
+}
+
+.footer-left, .footer-center, .footer-right {
+    margin: 10px 0; /* Adjust margins */
+}
+
+.footer-left h1 {
+    font-size: 48px; /* Reduce footer title size */
+    -webkit-text-stroke: 1px #333; /* Adjust text stroke */
+}
+
+.footer-left p, .footer-center p, .footer-right ul li {
+    font-size: 12px; /* Reduce font size */
+}
+
+.button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center-align buttons */
+    justify-content: center; /* Center-align container */
+    padding: 10px; /* Adjust padding */
+}
+
+.glass-btn {
+    width: 80%; /* Make buttons wider */
+    margin: 10px 0; /* Add margin between buttons */
+}
