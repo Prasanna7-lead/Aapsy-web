@@ -441,7 +441,9 @@ p {
 .next {
     background-color: rgb(255, 245, 226);
 }
-
+.product-grid:hover{
+    background-color: #a58a69;
+}
 .product-section {
     display: flex;
     align-items: center;
