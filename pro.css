@@ -1,3 +1,261 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    /* Default font for body text */
+}
+
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&family=Pacifico&display=swap&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* Header styles */
+header {
+    background-color: rgb(234, 218, 188);
+    padding: 10px 20px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    position: sticky; /* Changed from static to sticky */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it sits above other content */
+    height: 100px; /* Set height as needed */
+    box-shadow: 0px 2px 4px rgba(255, 200, 50, 0.5), 
+              0px 4px 8px rgba(255, 200, 50, 0.5), 
+              0px 8px 16px rgba(255, 200, 50, 0.5), 
+              0px 16px 32px rgba(255, 200, 50, 0.5);
+}
+
+/* Container styles */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Logo styles */
+.img-container {
+    /* background: linear-gradient(25deg, red, green, blue, yellow); */
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+}
+
+.img-container img {
+    border-radius: 50px;
+    padding: 5px;
+    max-height: 250%;
+    width: auto;
+}
+
+/* Navigation styles */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Navigation links styles */
+.nav-container a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    position: relative;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+/* Underline effect */
+.nav-container a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffbb00;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-container a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown styles */
+.nav-container .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown trigger link */
+.nav-container .dropdown>a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Dropdown icon */
+.nav-container .dropdown .dropdown-icon {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the dropdown icon on hover */
+.nav-container .dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Dropdown content */
+.nav-container .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Aligns dropdown content below the trigger */
+    left: 0;
+    width: 150px;
+    /* Fixed width for dropdown */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+    padding: 10px 0;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Show dropdown on hover */
+.nav-container .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown items */
+.nav-container .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+    /* Align text to the left */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Remove bottom border for last item */
+.nav-container .dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Dropdown item hover effect */
+.nav-container .dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Button styles */
+#start-trial {
+    background-color: #b88b52;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button underline effect */
+#start-trial::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: transform 0.3s ease;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+#start-trial:hover::before {
+    transform: scaleX(1);
+}
+
+/* Glowing effect on hover */
+#start-trial:hover {
+    background-color: #e1b173;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #de9637;
+    color: #333;
+}
+
+/* Cart icon styles */
+.cart-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 5px; /* Adjust the space between the cart icon and previous element */
+}
+
+.cart-icon a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px; /* Adjust padding around the icon */
+    transition: color 0.3s ease;
+}
+
+.cart-icon svg {
+    width: 24px; /* Set icon size */
+    height: 24px;
+    fill: none;
+    stroke: #333; /* Icon color */
+    stroke-width: 2;
+    transition: stroke 0.3s ease;
+}
+
+.cart-icon a:hover svg {
+    stroke: #a26e29; /* Change icon color on hover */
+}
+
+
+/* After-header styles */
+.after-header {
+    background-color: #fff6a5;
+    text-align: center;
+    height: 50px;
+}
+
+.after-header h4 {
+    padding-top: 15px;
+    font-weight: lighter;
+}
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    height: 100vh;
+    /* Full viewport height */
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
