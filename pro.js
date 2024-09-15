@@ -1,0 +1,1 @@
+document.getElementById("product-title").innerHTML = "Product Name";
