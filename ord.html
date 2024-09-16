@@ -373,6 +373,322 @@ header {
             color: green;
             font-size: 14px;
         }
+
+
+        .footer-container {
+    width: 100%;
+    background-color: #f9f6eb; /* Pink color to replicate the design */
+    padding: 40px;
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #555;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer-left h1 {
+    font-size: 72px;
+    margin: 0;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.footer-center p, .footer-right ul {
+    font-size: 14px;
+}
+
+.footer-center p a, .footer-right ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #333;
+}
+
+.footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-left h1 {
+    font-size: 144px;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 2px #333;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #333;
+}
+
+html,
+body {
+  background-color: #F2F7FD;
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.glass-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  margin-left: 1em;
+  margin-right: 1em;  
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.blue-btn {
+    -webkit-box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+    -moz-box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+    box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+
+    &:hover {
+      -webkit-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+      -moz-box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+      box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);      
+    }
+
+    .content {
+      font-size: 4em;
+      font-family: "Roboto", sans-serif;
+      background: linear-gradient(to right, #006fff, #00acff 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 10px 37px rgba(0, 111, 255, 0.8);
+    }
+  }
+
+  &.red-btn {
+    -webkit-box-shadow: 0px 20px 20px -17px rgba(255, 16, 39, 0.5);
+    -moz-box-shadow: 0px 20px 20px -17px rgba(255, 16, 39, 0.5);
+    box-shadow: 0px 20px 20px -17px rgba(255, 16, 39, 0.5);
+
+    &:hover {
+      -webkit-box-shadow: 0px 20px 35px -16px rgba(255, 16, 39, 0.57);
+      -moz-box-shadow: 0px 20px 35px -16px rgba(255, 16, 39, 0.57);
+      box-shadow: 0px 20px 35px -16px rgba(255, 16, 39, 0.57);      
+    }
+
+    .content {
+      font-size: 4em;
+      font-family: "Roboto", sans-serif;
+      background: linear-gradient(to right, #ff1027, #ff4f06 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 10px 37px rgba(255, 16, 39, 0.6);
+    }
+  }
+
+  &.amber-btn {
+    -webkit-box-shadow: 0px 20px 20px -17px rgba(255, 159, 16, 0.53);
+    -moz-box-shadow: 0px 20px 20px -17px rgba(255, 159, 16, 0.53);
+    box-shadow: 0px 20px 20px -17px rgba(255, 159, 16, 0.53);
+
+    &:hover {
+      -webkit-box-shadow: 0px 20px 35px -16px rgba(255, 159, 16, 0.6);
+      -moz-box-shadow: 0px 20px 35px -16px rgba(255, 159, 16, 0.6);
+      box-shadow: 0px 20px 35px -16px rgba(255, 159, 16, 0.6);      
+    }
+
+    .content {
+      font-size: 4em;
+      font-family: "Roboto", sans-serif;
+      background: linear-gradient(to right, #ff8d00, #f7ad07 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 10px 37px rgba(255, 94, 16, 0.7);
+    }
+  }
+
+  &:hover {
+    background-color: darken(#fafafa, 2%);    
+    transform: translateY(-5px);
+    transition: all 0.3s;
+  }
+}
+
+
+
+
+
+/* Mobile-First Adjustments (for screens 480px and below) */
+@media screen and (max-width: 480px) {
+
+    header {
+        height: auto; /* Allow flexible height */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
+        margin-top: 0; /* Remove top margin */
+    }
+
+    .img-container {
+        padding: 0; /* Remove padding */
+        margin-bottom: 10px; /* Add margin to separate elements */
+    }
+
+    .img-container img {
+        max-height: 80px; /* Adjust logo size for mobile */
+    }
+
+    .nav-container {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Adjust spacing between nav items */
+    }
+
+    .nav-container a {
+        font-size: 14px; /* Reduce font size for mobile */
+        padding: 10px 0; /* Increase padding for touch targets */
+        width: 100%; /* Make links full-width */
+        text-align: center; /* Center-align text */
+    }
+
+    .main-content {
+        flex-direction: column; /* Stack main content elements */
+        height: auto; /* Allow flexible height */
+    }
+
+    .text-container, .image-container {
+        width: 100%; /* Make containers full-width */
+        padding: 10px; /* Adjust padding */
+        border-right: none; /* Remove border */
+    }
+
+    .text-container h1 {
+        font-size: 24px; /* Adjust font size */
+        margin-bottom: 10px; /* Reduce bottom margin */
+    }
+
+    .text-container p {
+        font-size: 14px; /* Adjust font size */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .cta-button {
+        width: 100%; /* Make button full-width */
+        max-width: 100%; /* Remove max-width */
+        margin: 10px 0; /* Adjust margin */
+        padding: 12px 0; /* Adjust padding */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Ensure image scales properly */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .advertisement-bar {
+        flex-direction: column; /* Stack logos vertically */
+        padding: 10px 0; /* Adjust padding */
+    }
+
+    .brand-container {
+        margin-bottom: 10px; /* Add margin to separate logos */
+    }
+
+    .brand-container img {
+        width: 60px; /* Reduce logo size */
+        height: 60px; /* Ensure logos are uniform */
+    }
+
+    #title {
+        font-size: 20px; /* Reduce title size */
+        text-align: center; /* Center-align title */
+    }
+
+    .product-card {
+        width: 100%; /* Make product cards full-width */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+
+    .product-grid {
+        flex-direction: column; /* Stack products vertically */
+        gap: 10px; /* Reduce gap between products */
+    }
+
+    .footer-container {
+        padding: 20px 10px; /* Adjust padding */
+        text-align: center; /* Center-align text */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        margin: 10px 0; /* Adjust margins */
+    }
+
+    .footer-left h1 {
+        font-size: 48px; /* Reduce footer title size */
+        -webkit-text-stroke: 1px #333; /* Adjust text stroke */
+    }
+
+    .footer-left p, .footer-center p, .footer-right ul li {
+        font-size: 12px; /* Reduce font size */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center-align buttons */
+        justify-content: center; /* Center-align container */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .glass-btn {
+        width: 80%; /* Make buttons wider */
+        margin: 10px 0; /* Add margin between buttons */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -475,6 +791,61 @@ header {
     </div>
 </div>
 </div>
+
+
+<footer class="footer-container">
+    <div class="footer-content">
+        <div class="footer-left">
+            <h1>AAPSY</h1>
+            <p>A curated collection of elegant and stylish clothing for every occasion.</p>
+        </div>
+        <div class="footer-center">
+            <p><a href="tel:9876543210">+91 9876543210</a></p>
+            <p><a href="mailto:support@aapsy.com">support@aapsy.com</a></p>
+            <p>2733 Fashion St. Chennai, TN</p>
+
+            <div class="button-container">
+
+                <div class="glass-btn blue-btn">
+                  <!--<div class="content">
+                    h
+                  </div> -->
+                  <img src="https://i.postimg.cc/DwbWDQTx/facebook.png" alt="facebook" style="width: 4em;">
+                </div>
+              
+                <div class="glass-btn red-btn">
+                  <!-- <div class="content">
+                    e
+                  </div> -->
+                  <img src="https://i.postimg.cc/LstJ4Hhf/youtube.png" alt="youtube" style="width: 4em;">
+                </div>
+                
+                <div class="glass-btn amber-btn">
+                  <!-- <div class="content">
+                    y
+                  </div> -->
+                  <img src="https://i.postimg.cc/tgQ1H1Rp/soundcloud.png" alt="soundcloud" style="width: 4em;">
+                </div>
+              
+              </div>
+        </div>
+        
+        <div class="footer-right">
+            <ul>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 AAPSY. All Rights Reserved.</p>
+    </div>
+</footer>
+
 
 </body>
 </html>
