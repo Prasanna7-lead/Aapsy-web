@@ -1,17 +1,15 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     const dropdown = document.querySelector('.dropdown');
-//     const dropdownContent = document.querySelector('.dropdown-content');
-
-//     // Toggle dropdown menu on button click
-//     dropdown.addEventListener('click', function (event) {
-//         event.stopPropagation(); // Prevent click event from propagating to the document
-//         dropdown.classList.toggle('show');
-//     });
-
-//     // Close dropdown menu if clicked outside
-//     document.addEventListener('click', function (event) {
-//         if (!dropdown.contains(event.target)) {
-//             dropdown.classList.remove('show');
-//         }
-//     });
-// });
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        item.classList.toggle('active');
+        if (item.classList.contains('active')) {
+            answer.style.display = 'block';
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            item.querySelector('.toggle-symbol').textContent = '×';
+        } else {
+            answer.style.maxHeight = 0;
+            item.querySelector('.toggle-symbol').textContent = '+';
+            answer.style.display = 'none';
+        }
+    });
+});

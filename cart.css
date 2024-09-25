@@ -1,0 +1,454 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    /* Default font for body text */
+}
+
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+
+/* Header styles */
+header {
+    background-color: rgb(234, 218, 188);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    /* Changed from static to sticky */
+    top: 0;
+    /* Stick to the top */
+    width: 100%;
+    /* Ensure it spans the full width */
+    z-index: 1000;
+    /* Ensure it sits above other content */
+    height: 100px;
+    /* Set height as needed */
+}
+
+
+/* Container styles */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Logo styles */
+.img-container {
+    /* background: linear-gradient(25deg, red, green, blue, yellow); */
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.img-container img {
+    border-radius: 50px;
+    padding: 5px;
+    max-height: 250%;
+    width: auto;
+}
+
+/* Navigation styles */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Navigation links styles */
+.nav-container a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    position: relative;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+/* Underline effect */
+.nav-container a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #956b54;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-container a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown styles */
+.nav-container .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown trigger link */
+.nav-container .dropdown>a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Dropdown icon */
+.nav-container .dropdown .dropdown-icon {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the dropdown icon on hover */
+.nav-container .dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Dropdown content */
+.nav-container .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Aligns dropdown content below the trigger */
+    left: 0;
+    width: 150px;
+    /* Fixed width for dropdown */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+    padding: 10px 0;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Show dropdown on hover */
+.nav-container .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown items */
+.nav-container .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+    /* Align text to the left */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Remove bottom border for last item */
+.nav-container .dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Dropdown item hover effect */
+.nav-container .dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Button styles */
+#start-trial {
+    background-color: #b88b52;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button underline effect */
+#start-trial::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: transform 0.3s ease;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+#start-trial:hover::before {
+    transform: scaleX(1);
+}
+
+/* Glowing effect on hover */
+#start-trial:hover {
+    background-color: #e1b173;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #de9637;
+    color: #333;
+}
+
+/* After-header styles */
+.after-header {
+    background-color: #fff6a5;
+    text-align: center;
+    height: 50px;
+}
+
+.after-header h4 {
+    padding-top: 15px;
+    font-weight: lighter;
+}
+
+/* *, ::after, ::before {
+    box-sizing: inherit;
+  }
+.ast-container {
+    max-width: 100%;
+    padding: 0;
+  } */
+
+
+/* main {
+    padding: 20px;
+} */
+
+.about-us {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+.containers {
+    display: flex; /* Change to flexbox */
+    justify-content: space-between; /* Space between cart and price details */
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+.container {
+    display: block;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    flex: 3;
+    padding: 1px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px 20px;
+}
+
+
+.pincode-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pincode-btn:hover{
+    background-color: #ae9068;
+}
+/* .pincode-btn::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: transform 0.3s ease;
+    transform-origin: left;
+    transform: scaleX(0);
+} */
+
+.pincode-btn:hover::before {
+    transform: scaleX(1);
+}
+
+/* Glowing effect on hover */
+.pincode-btn:hover {
+    background-color: #e1b173;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #de9637;
+    color: #333;
+}
+
+.cart-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.item-details {
+    margin-bottom: 10px;
+}
+
+.price-striked {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.discount {
+    color: green;
+    margin-left: 5px;
+}
+
+.offer {
+    font-size: 0.9em;
+    color: green;
+    margin-left: 10px;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+}
+
+.item-actions button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+.item-actions span {
+    margin: 0 10px;
+}
+
+.save-remove {
+    margin-top: 10px;
+}
+
+.save-remove a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.insurance {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.insurance h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.insurance-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.add-item {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.price-summary {
+    flex: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.price-summary h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.price-details p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total-amount {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.savings {
+    color: green;
+    margin-top: 10px;
+}
+
+.place-order {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 110px;
+    font-size: 1.1em;
+}

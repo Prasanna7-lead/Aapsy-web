@@ -3,7 +3,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif; /* Default font for body text */
+    font-family: 'Montserrat', sans-serif;
+    /* Default font for body text */
 }
 
 /* Import fonts from Google Fonts */
@@ -14,9 +15,18 @@ header {
     background-color: rgb(234, 218, 188);
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: static;
+    position: sticky;
+    /* Changed from static to sticky */
+    top: 0;
+    /* Stick to the top */
+    width: 100%;
+    /* Ensure it spans the full width */
+    z-index: 1000;
+    /* Ensure it sits above other content */
     height: 100px;
+    /* Set height as needed */
 }
+
 
 /* Container styles */
 .header-container {
@@ -88,7 +98,7 @@ header {
 }
 
 /* Dropdown trigger link */
-.nav-container .dropdown > a {
+.nav-container .dropdown>a {
     display: flex;
     align-items: center;
     color: #333;
@@ -112,9 +122,11 @@ header {
 .nav-container .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%; /* Aligns dropdown content below the trigger */
+    top: 100%;
+    /* Aligns dropdown content below the trigger */
     left: 0;
-    width: 150px; /* Fixed width for dropdown */
+    width: 150px;
+    /* Fixed width for dropdown */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -140,7 +152,8 @@ header {
     color: #333;
     text-decoration: none;
     font-size: 14px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
+    /* Align text to the left */
     border-bottom: 1px solid #ddd;
 }
 
@@ -217,7 +230,7 @@ header {
   } */
 
 
-  /* main {
+/* main {
     padding: 20px;
 } */
 
@@ -225,7 +238,7 @@ header {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-us h2 {
@@ -233,12 +246,12 @@ header {
     margin-bottom: 20px;
 }
 
-.header-container {
+/* .header-container {
     background-position: center;
     background-size: cover;
     background: linear-gradient(to top, rgba(0,0,0,5)50%,rgba(0,0,0,0.5)50%,url(Images/hugo-clement-JGtPrdnMgQc-unsplash.jpg));
 
-}
+} */
 /* 
 .team-photo {
     width: 500%;
@@ -265,7 +278,422 @@ footer {
     width: 100%;
     bottom: 0;
 } */
-.tpimg{
-    
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 
+
+}
+
+
+/* Container for background with pseudo-element */
+.background-container {
+    position: relative;
+    /* To position pseudo-element */
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+    /* Prevents overflow if content exceeds viewport */
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url('Images/shopping.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Optional: Keeps the background fixed in place during scroll */
+    opacity: 0.6;
+    /* Apply opacity to the background */
+    z-index: -1;
+    /* Place the pseudo-element behind the content */
+}
+
+/* Ensure the content is positioned above the background */
+.background-content {
+    position: relative;
+    /* Ensure it sits above the pseudo-element */
+    z-index: 1;
+    /* Higher than pseudo-element */
+
+}
+
+h3 {
+    padding-top: 110px;
+    text-align: center;
+    color: rgb(88, 56, 12);
+}
+
+h1 {
+    padding-top: 9%;
+    text-align: center;
+    color: rgb(60, 38, 8);
+    font-family: "Anton", sans-serif;
+    font-weight: 1100;
+    font-style: normal;
+    font-size: 45px;
+}
+
+h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(60, 38, 8);
+    font-size: 19px;
+}
+
+h5 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+h6 {
+    text-align: center;
+    padding-top: 10px;
+    height: 50px;
+
+}
+
+hr {
+    border: none;
+    /* Remove default border */
+    height: 3px;
+    /* Make the line thicker */
+    background-color: rgb(60, 38, 8);
+    /* Color of the line */
+    margin: 20px auto;
+    /* Space above and below the line, auto centers it */
+    width: 90px;
+    /* Adjust width to create a gap from the sides */
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    /* Full viewport height */
+}
+
+.box {
+    display: flex;
+    /* Makes the box fit around the content */
+    /* Adds space inside the box */
+    background-color: rgba(100, 87, 87, 0.8);
+    /* Dark background color with transparency */
+    color: rgb(60, 38, 8);
+    border-radius: 13px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Shadow effect for depth */
+    text-align: center;
+    /* Center-aligns text inside the box */
+    margin-top: 1%;
+    /* Space above the box */
+    height: 40px;
+}
+
+/* .divider{
+    display: flex;
+} */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.info-box {
+    text-align: center;
+    border: 1px;
+    background-color: rgb(213, 210, 199);
+    height: 260px;
+    border-radius: 9px;
+    max-width: 280px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+.info-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+p {
+    font-family: "PT Serif", serif;
+}
+
+.next {
+    background-color: rgb(255, 245, 226);
+}
+.product-grid:hover{
+    background-color: #a58a69;
+}
+.product-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+    background-color: #ffffff;
+}
+
+.image img {
+    max-width: 70%;
+    height: auto;
+    height: auto;
+    display: block;
+    margin-right: 20px;
+}
+
+.description {
+    font-size: 17px;
+    color: #777;
+    max-width: 80%;
+}
+
+.content {
+    max-width: 50%;
+    max-height: 130%;
+}
+
+.imagee {
+    /* Adjust based on your desired image size */
+    margin-left: 20px;
+}
+
+.imagee img {
+    width: 90%;
+    height: 50%;
+    display: block;
+}
+
+.pane-section {
+    background-color: rgb(234, 218, 188);
+    max-height: 130%;
+}
+
+.pane {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    padding: 40px;
+    color: rgb(60, 38, 8);
+
+
+}
+
+.ba-container {
+    position: relative;
+    /* To position pseudo-element */
+    width: 100%;
+    height: 60vh;
+    /* Full viewport height */
+    overflow: hidden;
+    /* Prevents overflow if content exceeds viewport */
+}
+
+.ba-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url('Images/hugo-clement-JGtPrdnMgQc-unsplash.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Optional: Keeps the background fixed in place during scroll */
+    opacity: 0.6;
+    /* Apply opacity to the background */
+    z-index: -1;
+    /* Place the pseudo-element behind the content */
+}
+
+/* Ensure the content is positioned above the background */
+.ba-content {
+    position: relative;
+    /* Ensure it sits above the pseudo-element */
+    z-index: 1;
+    /* Higher than pseudo-element */
+
+}
+
+
+.button-container {
+    display: inline-block;
+    padding: 30px;
+    padding-left: 13%;
+   
+}
+
+.explore-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff; /* Text color */
+    text-decoration: none;
+    border: 1px solid #ffffff; /* Border color */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    padding-left: 13px;
+
+}
+
+.explore-button:hover {
+    background-color: #a58a69;
+  
+}
+
+.arrow {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+.footer-container {
+    width: 100%;
+    background-color: #f9f6eb; /* Pink color to replicate the design */
+    padding: 40px;
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #555;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer-left h1 {
+    font-size: 72px;
+    margin: 0;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.footer-center p, .footer-right ul {
+    font-size: 14px;
+}
+
+.footer-center p a, .footer-right ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #333;
+}
+
+.footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-left h1 {
+    font-size: 144px;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 2px #333;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #333;
+}
+
+
+#title {
+    font-size: 20px; /* Reduce title size */
+    text-align: center; /* Center-align title */
+}
+
+.product-card {
+    width: 100%; /* Make product cards full-width */
+    margin-bottom: 20px; /* Add bottom margin */
+}
+
+.product-grid {
+    flex-direction: column; /* Stack products vertically */
+    gap: 10px; /* Reduce gap between products */
+}
+.footer-container {
+    padding: 20px 10px; /* Adjust padding */
+    text-align: center; /* Center-align text */
+}
+
+.footer-content {
+    flex-direction: column; /* Stack footer sections vertically */
+    align-items: center; /* Center-align content */
+}
+
+.footer-left, .footer-center, .footer-right {
+    margin: 10px 0; /* Adjust margins */
+}
+
+.footer-left h1 {
+    font-size: 48px; /* Reduce footer title size */
+    -webkit-text-stroke: 1px #333; /* Adjust text stroke */
+}
+
+.footer-left p, .footer-center p, .footer-right ul li {
+    font-size: 12px; /* Reduce font size */
+}
+
+.button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center-align buttons */
+    justify-content: center; /* Center-align container */
+    padding: 10px; /* Adjust padding */
+}
+
+.glass-btn {
+    width: 80%; /* Make buttons wider */
+    margin: 10px 0; /* Add margin between buttons */
 }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="img-container">
+                <img src="Images/logo-removebg-preview.png" alt="Logo">
+            </div>
+            <div class="nav-container">
+                <div class="dropdown">
+                    <a href="#" class="products">PRODUCTS
+                        <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.293 5.293a1 1 0 0 1 1.414 0L8 6.586l2.293-1.293a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1 0-1.414z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Kids</a>
+                        <a href="#">Mens</a>
+                        <a href="#">Womens</a>
+                    </div>
+                </div>
+                <a href="login.html" class="login">LOG IN</a>
+                <a id="start-trial" href="#">START TRIAL</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="header">
+            <h2 style="font-size: 1.2em; font-family:Verdana, Geneva, Tahoma, sans-serif;">From Saved Addresses</h2>
+            <button class="pincode-btn">Enter Delivery Pincode</button>
+        </div>
+
+    </div>
+    
+    <div class="containers">
+        <!-- Cart Section -->
+        <div class="cart">
+            
+            <div class="cart-item">
+                <div class="item-details">
+                    <p>Product Description</p>
+                    <p class="price-striked">₹999 <span class="discount">58% Off</span></p>
+                    <p class="price">₹417 <span class="offer">1 offer applied</span></p>
+                </div>
+                <div class="item-actions">
+                    <button id="minus">-</button>
+                    <span>1</span>
+                    <button id="plus">+</button>
+                </div>
+                <div class="save-remove">
+                    <a href="#">SAVE FOR LATER</a>
+                    <a href="#">REMOVE</a>
+                </div>
+            </div>
+            <div class="cart-item">
+                <div class="item-details">
+                    <p>Product Description</p>
+                    <p class="price-striked">₹1,499 <span class="discount">33% Off</span></p>
+                    <p class="price">₹999 <span class="offer">1 offer applied</span></p>
+                </div>
+                <div class="item-actions">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="save-remove">
+                    <a href="#">SAVE FOR LATER</a>
+                    <a href="#">REMOVE</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Price Summary Section -->
+        <div class="price-summary">
+            <h3>PRICE DETAILS</h3>
+            <div class="price-details">
+                <br>
+                <p>Price (2 items) <span>₹2,498</span></p>
+                <p>Discount <span>- ₹1,082</span></p>
+                <p>Platform Fee <span>₹3</span></p>
+                <p>Delivery Charges <span>Free</span></p>
+                <br>
+                <p class="total-amount">Total Amount <span>₹1,419</span></p>
+                <br>
+                <p class="savings">You will save ₹1,079 on this order</p>
+            </div>
+            <button class="place-order">PLACE ORDER</button>
+        </div>
+    </div>
+    <script src="./cart.js"></script>
+</body>
+</html>
