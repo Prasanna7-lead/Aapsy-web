@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #e5e5e5;
+}
+.tops{
+    background-color: #b9b3ac;
+    padding: 1px;
+}
+h2 {
+    text-align: center;
+}
+
+.row {
+    margin: 10px 0;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 250px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#add-address-btn {
+    background-color: #ffffff;
+    border: 1px solid #fdfdfd;
+}
+
+button#edit-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+}
+
+button#save-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.address {
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#edit-profile {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#edit-profile:hover {
+    background-color: #45a049;
+}
+
+
+
+#logout {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#logout:hover {
+    background-color: #e53935;
+}

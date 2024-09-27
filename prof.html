@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Profile Page</title>
+ <link rel="stylesheet" href="prof.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tops">
+            <h2>Profile Page</h2>
+        </div>
+       
+        <main>
+            <form class="profile-form">
+        <div class="profile-info">
+            <div class="row">
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username" placeholder="Enter Username" style="background-color:rgb(249, 244, 237)"  >
+                    </div>
+                <!-- <label>Name:</label>
+                <span id="name-static">John Doe</span>
+                <input type="text" id="name-edit" style="display:none;" value="John Doe"> -->
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Enter Email"  style="background-color:rgb(249, 244, 237)">
+                <br>
+            </div>
+<br>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <br>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number"  style="background-color:rgb(249, 244, 237)">
+            </div>
+            <br>
+
+
+            <!-- <div class="row">
+                <label>Email:</label>
+                <span id="email-static">johndoe@example.com</span>
+                <input type="email" id="email-edit" style="display:none;" value="johndoe@example.com">
+            </div>
+
+            <div class="row">
+                <label>Phone Number:</label>
+                <span id="phone-static">123-456-7890</span>
+                <input type="text" id="phone-edit" style="display:none;" value="123-456-7890">
+            </div> -->
+
+            <div class="gender-both">
+                <label>Gender:
+                </label>
+                <br>
+                <div class="gender" style="padding-left: 100px;">
+                    <br>
+                    <input type="radio" name="gender" value="male" id="male" >
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" value="female" id="female" >
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="address-container">
+                <h3>Addresses</h3>
+                <div id="addresses">
+                    <div class="address" id="address-1">
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="username" >Street:</label>
+                                <input type="text" id="username" name="username" placeholder="Enter Street" style="padding-right: 0px; background-color:rgb(249, 244, 237)"  >
+                            </div>
+                        </div>
+                        <div class="row" style="display: flex; justify-content: space-between;">
+                            <div class="form-group" style="display: flex; justify-content: space-between;">
+                                <label for="username">State:</label>
+                                <input type="text" id="username" name="username" placeholder="Enter Username" style="margin-right: 50px; background-color:rgb(249, 244, 237)"  >
+                                <label for="username">Country:</label>
+                                <input type="text" id="username" name="username" placeholder="Enter Username" style="margin-right: 50px; background-color:rgb(249, 244, 237)"  >
+                            </div>
+                        </div>
+                        <div class="row" style="display: flex; justify-content: space-between;">
+                            <div class="form-group" style="display: flex;">
+                                <label for="username">Postal Code:</label>
+                                <input type="text" id="username" name="username" placeholder="Enter Username" style="margin-right: 50px; background-color:rgb(249, 244, 237)">
+                                <label for="username">Address Type:</label>
+                                <input type="text" id="username" name="username" placeholder="Enter Username" style="margin-right: 50px; background-color:rgb(249, 244, 237)"  >
+                            </div>
+                        </div>
+                       
+                    </div>
+                
+            
+            <div class="button-group">
+                    <button type="button" id="edit-profile">Edit Profile</button>
+                    <button type="button" id="logout">Logout</button>
+                </div>
+        </div>
+    </form>
+    </main>
+    </div>
+
+    <script src="prof.js">
+    // document.getElementById('edit-profile').addEventListener('click', function() {
+    //     let inputs = document.querySelectorAll('.profile-form input');
+    //     inputs.forEach(input => input.disabled = !input.disabled);
+    // });
+
+    // document.getElementById('logout').addEventListener('click', function() {
+    //     alert('Logged out successfully!');
+    //     // Redirect to login page or perform logout actions here
+    // });</script>
+</body>
+
+
+</html>
